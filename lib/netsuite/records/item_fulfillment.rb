@@ -26,6 +26,7 @@ module NetSuite
 
       field :item_list,                ItemFulfillmentItemList
       field :package_list,             ItemFulfillmentPackageList
+      field :package_ups_list,         ItemFulfillmentPackageUpsList
       field :custom_field_list,        CustomFieldList
 
       attr_reader   :internal_id
@@ -34,11 +35,6 @@ module NetSuite
       def initialize(attributes = {})
         @internal_id = attributes.delete(:internal_id) || attributes.delete(:@internal_id)
         @external_id = attributes.delete(:external_id) || attributes.delete(:@external_id)
-
-        if !attributes.empty? && attributes[:package_ups_list]
-          attributes[:package_list] ||= {}
-          attributes[:package_list].merge! attributes[:package_ups_list]
-        end
 
         initialize_from_attributes_hash(attributes)
       end
