@@ -26,8 +26,8 @@ module NetSuite
       # :expense_list
 
       record_refs :approval_status, :bill_address_list, :klass, :created_from, :currency,
-                  :custom_form, :department, :employee, :entity, :location, :next_approver,
-                  :order_status, :purchase_contract, :ship_method, :subsidiary, :terms
+                  :custom_form, :department, :employee, :entity, :interco_transaction, :location, :next_approver,
+                  :order_status, :purchase_contract, :ship_method, :ship_to, :subsidiary, :terms
 
       attr_reader :internal_id
       attr_accessor :external_id

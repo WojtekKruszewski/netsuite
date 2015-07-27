@@ -12,10 +12,11 @@ module NetSuite
              :unit_cost_override, :units_display
 
       record_refs :bill_variance_status, :inventory_detail, :item, :landed_cost,
-                  :location
+                  :location, :klass
 
       field :options, CustomFieldList
       field :custom_field_list, CustomFieldList
+
 
       def initialize(attributes_or_record = {})
         case attributes_or_record

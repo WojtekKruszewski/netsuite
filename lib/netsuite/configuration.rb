@@ -192,6 +192,7 @@ module NetSuite
         'xmlns:tranCust'       => "urn:customers_#{api_version}.transactions.webservices.netsuite.com",
         'xmlns:tranEmp'        => "urn:employees_#{api_version}.transactions.webservices.netsuite.com",
         'xmlns:tranInvt'       => "urn:inventory_#{api_version}.transactions.webservices.netsuite.com",
+        'xmlns:tranPurch'      => "urn:purchases_#{api_version}.transactions.webservices.netsuite.com",
         'xmlns:listSupport'    => "urn:support_#{api_version}.lists.webservices.netsuite.com",
         'xmlns:tranGeneral'    => "urn:general_#{api_version}.transactions.webservices.netsuite.com",
         'xmlns:commGeneral'    => "urn:communication_#{api_version}.general.webservices.netsuite.com",

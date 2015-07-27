@@ -1,5 +1,8 @@
 module NetSuite
   module Records
+    # Beaware of possible gotcha when closing sales order. You need to set the
+    # SalesOrder#custom_form to "Basic Sales Order Form" otherwise you might get
+    # errors when trying to close it
     class PurchaseOrderItem
       include Support::Fields
       include Support::RecordRefs
@@ -14,7 +17,7 @@ module NetSuite
       field :custom_field_list, CustomFieldList
 
       record_refs :bill_variance_status, :klass, :created_from, :customer, :department,
-                  :inventory_detail, :item, :landed_cost_category, :linked_order_list,
+                  :inventory_detail, :item, :klass, :landed_cost_category, :linked_order_list,
                   :location, :options, :purchase_contract, :tax_code, :units
 
       def initialize(attributes_or_record = {})
